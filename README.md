@@ -69,3 +69,5 @@ To access the dashboard:
 - Fetch, insert and update data rates
 - Lock tables
 - Database size
+
+![Grafana Dashboard](images/dashboard.png)
