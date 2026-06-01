@@ -51,3 +51,21 @@ bash scripts/restore/restore.sh backups/<filename>.sql.gz
 - Dropped `orders` table to simulate data loss
 - Restored from compressed backup
 - Verified 1000 rows recovered successfully
+
+## Monitoring Dashboard
+
+This project includes a full Prometheus + Grafana monitoring stack.
+
+To access the dashboard:
+1. Start all services: `cd docker && docker compose up -d`
+2. Open Grafana: `http://localhost:3000`
+3. Login with your credentials
+4. Navigate to Dashboards → PostgreSQL Database
+
+### Dashboard metrics include:
+- CPU and memory usage
+- Active sessions and connections
+- Transaction rates
+- Fetch, insert and update data rates
+- Lock tables
+- Database size
