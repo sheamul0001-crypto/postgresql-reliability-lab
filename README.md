@@ -71,3 +71,39 @@ To access the dashboard:
 - Database size
 
 ![Grafana Dashboard](images/dashboard.png)
+
+
+## Cloud SQL (Google Cloud)
+
+A Python application connecting to a live Google Cloud SQL PostgreSQL instance.
+
+### Architecture
+Python App
+↓
+Cloud SQL (PostgreSQL 16)
+↓
+Google Cloud (europe-west2)
+
+### Features
+- Connects to Cloud SQL using psycopg2
+- Creates tables and inserts events programmatically
+- Demonstrates GCP database connectivity
+
+### Run the Cloud SQL app
+1. Set up a Cloud SQL PostgreSQL instance on GCP
+2. Add your IP to authorised networks
+3. Update credentials in `cloud-sql/app.py`
+4. Run `python3 cloud-sql/app.py`
+
+### Output
+
+Connecting to Cloud SQL...
+Table created successfully
+Inserted event: app_started
+Inserted event: health_check_passed
+Inserted event: backup_completed
+--- 3 events in Cloud SQL ---
+3 | backup_completed    | 2026-06-02 20:58:58
+2 | health_check_passed | 2026-06-02 20:58:58
+1 | app_started         | 2026-06-02 20:58:58
+
