@@ -1,4 +1,4 @@
-# PostgreSQL Reliability Lab
+# Database Reliability Lab
 
 A self-contained reliability engineering environment demonstrating automated 
 monitoring, backup, and restore for a PostgreSQL database using Docker and Python.
